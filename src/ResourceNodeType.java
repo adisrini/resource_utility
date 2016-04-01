@@ -1,10 +1,10 @@
 
-public enum NodeType {
+public enum ResourceNodeType {
 	FOLDER, IMAGE, AUDIO, CONTROLLABLE, AI;
 	
 	private String name;
 	
-	private NodeType() {
+	private ResourceNodeType() {
 		this.name = this.name().toLowerCase();
 	}
 	

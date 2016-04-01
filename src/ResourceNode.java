@@ -2,24 +2,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Node {
+public class ResourceNode {
 		
 	private String filePath;
-	private NodeType nodeType;
+	private ResourceNodeType nodeType;
 	private int level;
-	private List<Node> children;
+	private List<ResourceNode> children;
 		
-	public Node(String path, NodeType type) {
+	public ResourceNode(String path, ResourceNodeType type) {
 		this.filePath = path;
 		this.nodeType = type;
-		this.children = new ArrayList<Node>();
+		this.children = new ArrayList<ResourceNode>();
 	}
 	
-	public void addChildren(Node... children) {
+	public void addChildren(ResourceNode... children) {
 		this.children.addAll(Arrays.asList(children));
 	}
 	
-	public List<Node> getChildren() {
+	public List<ResourceNode> getChildren() {
 		return this.children;
 	}
 	
@@ -27,7 +27,7 @@ public class Node {
 		return this.filePath;
 	}
 	
-	public NodeType getType() {
+	public ResourceNodeType getType() {
 		return this.nodeType;
 	}
 	
@@ -40,7 +40,7 @@ public class Node {
 		this.filePath = filePath;
 	}
 	
-	public void setNodeType(NodeType nodeType) {
+	public void setNodeType(ResourceNodeType nodeType) {
 		this.nodeType = nodeType;
 	}
 
